@@ -3,27 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tndreka <tndreka@student.42heilbronn.de    +#+  +:+       +#+        */
+/*   By: tndreka < tndreka@student.42heilbronn.d    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/13 05:11:20 by tndreka           #+#    #+#             */
-/*   Updated: 2025/07/13 05:18:30 by tndreka          ###   ########.fr       */
+/*   Updated: 2025/07/14 11:05:25 by tndreka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
 
-Animal::Animal()
+Animal::Animal() : type("")
 {
     // Default constructor
     std::cout << "Animal default constructor called" << std::endl;
-    this->type = "";
 }
 
-Animal::Animal(const Animal &other)
+Animal::Animal(const Animal &other) : type(other.type)
 {
     //Copy constructor
     std::cout << "Animal copy constructor called" << std::endl;
-    this->type = other.type;
 }
 
 Animal& Animal::operator=(const Animal &other)
@@ -41,4 +39,14 @@ Animal::~Animal()
 {
     // Destructor
     std::cout << "Animal destructor called" << std::endl;
+}
+
+void Animal::makeSound() const
+{
+	std::cout << "some generic animal sound" << std::endl;
+}
+
+std::string Animal::getType() const
+{
+	return this->type;
 }

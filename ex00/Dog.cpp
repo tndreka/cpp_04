@@ -3,10 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tndreka <tndreka@student.42heilbronn.de    +#+  +:+       +#+        */
+/*   By: tndreka < tndreka@student.42heilbronn.d    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/13 05:11:39 by tndreka           #+#    #+#             */
-/*   Updated: 2025/07/13 05:11:41 by tndreka          ###   ########.fr       */
+/*   Updated: 2025/07/14 10:51:20 by tndreka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "Dog.hpp"
 
