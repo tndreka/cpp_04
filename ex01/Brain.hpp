@@ -6,7 +6,7 @@
 /*   By: tndreka < tndreka@student.42heilbronn.d    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/16 17:59:47 by tndreka           #+#    #+#             */
-/*   Updated: 2025/07/16 18:05:30 by tndreka          ###   ########.fr       */
+/*   Updated: 2025/07/16 18:13:05 by tndreka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ public:
 	Brain(const Brain& other);
 	Brain& operator=(const Brain& other);
 	~Brain();
+	//
 };
 
 #endif
