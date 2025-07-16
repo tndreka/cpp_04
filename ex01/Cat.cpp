@@ -6,19 +6,19 @@
 /*   By: tndreka < tndreka@student.42heilbronn.d    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/13 05:12:12 by tndreka           #+#    #+#             */
-/*   Updated: 2025/07/16 17:34:50 by tndreka          ###   ########.fr       */
+/*   Updated: 2025/07/16 18:30:40 by tndreka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
 
-Cat::Cat() 
+Cat::Cat() : brain(new Brain())
 {
 	std::cout << "Cat default constructor called" << std::endl;
 	type = "Cat";
 }
 
-Cat::Cat(const Cat& other) : Animal(other)
+Cat::Cat(const Cat& other) : Animal(other), brain ( new Brain(*other.brain))
 {
 	std::cout << "Cat copy constructor called" << std::endl;
 	
