@@ -6,7 +6,7 @@
 /*   By: tndreka < tndreka@student.42heilbronn.d    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/16 17:08:59 by tndreka           #+#    #+#             */
-/*   Updated: 2025/07/16 17:49:35 by tndreka          ###   ########.fr       */
+/*   Updated: 2025/07/16 19:55:50 by tndreka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,10 @@ WrongCat::WrongCat()
 	type = "WrongCat";
 }
 
-WrongCat::WrongCat(const WrongCat &other)
+WrongCat::WrongCat(const WrongCat &other) : WrongAnimal(other)
 {
     //Copy constructor
     std::cout << "WrongCat copy constructor called" << std::endl;
-	this->type = other.type;
 }
 
 WrongCat& WrongCat::operator=(const WrongCat &other)
