@@ -6,7 +6,7 @@
 /*   By: tndreka < tndreka@student.42heilbronn.d    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/13 05:11:29 by tndreka           #+#    #+#             */
-/*   Updated: 2025/07/16 16:37:05 by tndreka          ###   ########.fr       */
+/*   Updated: 2025/07/16 18:21:55 by tndreka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,12 @@
 #define DOG_HPP
 
 #include "Animal.hpp"
+#include "Brain.hpp"
 
 	class Dog : public Animal
 	{
+	private:
+		Brain* brain;
 	public:
 		Dog();
 		Dog(const Dog& other);
