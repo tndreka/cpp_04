@@ -1,33 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tndreka < tndreka@student.42heilbronn.d    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/13 05:11:20 by tndreka           #+#    #+#             */
-/*   Updated: 2025/07/16 17:38:30 by tndreka          ###   ########.fr       */
+/*   Created: 2025/07/16 17:08:59 by tndreka           #+#    #+#             */
+/*   Updated: 2025/07/16 17:49:35 by tndreka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "WrongCat.hpp"
 
-Animal::Animal() : type("Animal")
+WrongCat::WrongCat()
 {
     // Default constructor
-    std::cout << "Animal default constructor called" << std::endl;
+    std::cout << "WrongCat default constructor called" << std::endl;
+	type = "WrongCat";
 }
 
-Animal::Animal(const Animal &other) : type(other.type)
+WrongCat::WrongCat(const WrongCat &other)
 {
     //Copy constructor
-    std::cout << "Animal copy constructor called" << std::endl;
+    std::cout << "WrongCat copy constructor called" << std::endl;
+	this->type = other.type;
 }
 
-Animal& Animal::operator=(const Animal &other)
+WrongCat& WrongCat::operator=(const WrongCat &other)
 {
     // Assignment operator
-    std::cout << "Animal assignment operator called" << std::endl;
+    std::cout << "WrongCat assignment operator called" << std::endl;
     if (this != &other)
     {
         this->type = other.type;
@@ -35,18 +37,18 @@ Animal& Animal::operator=(const Animal &other)
     return *this;
 }
 
-Animal::~Animal()
+WrongCat::~WrongCat()
 {
     // Destructor
-    std::cout << "Animal destructor called" << std::endl;
+    std::cout << "WrongCat destructor called" << std::endl;
 }
 
-void Animal::makeSound() const
+void WrongCat::makeSound() const
 {
-	std::cout << "some generic animal sound" << std::endl;
+	std::cout << "WrongCat sound  !  !  ! " << std::endl;
 }
 
-std::string Animal::getType() const
+std::string WrongCat::getType() const
 {
 	return this->type;
 }

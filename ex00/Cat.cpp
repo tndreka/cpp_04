@@ -6,7 +6,7 @@
 /*   By: tndreka < tndreka@student.42heilbronn.d    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/13 05:12:12 by tndreka           #+#    #+#             */
-/*   Updated: 2025/07/16 16:59:51 by tndreka          ###   ########.fr       */
+/*   Updated: 2025/07/16 17:34:50 by tndreka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ Cat::Cat(const Cat& other) : Animal(other)
 
 Cat& Cat::operator=(const Cat& other)
 {
-	std::cout << "Dog copy assignment operator called" << std::endl;
+	std::cout << "Cat copy assignment operator called" << std::endl;
 	if (this != &other)
 	{
 		Animal::operator=(other);
@@ -36,7 +36,7 @@ Cat& Cat::operator=(const Cat& other)
 
 Cat::~Cat()
 {
-	std::cout << "Dog destructor called" << std::endl;
+	std::cout << "Cat destructor called" << std::endl;
 }
 
 void Cat::makeSound()const
