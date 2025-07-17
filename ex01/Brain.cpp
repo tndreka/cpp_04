@@ -6,7 +6,7 @@
 /*   By: tndreka < tndreka@student.42heilbronn.d    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/16 18:00:00 by tndreka           #+#    #+#             */
-/*   Updated: 2025/07/16 18:39:33 by tndreka          ###   ########.fr       */
+/*   Updated: 2025/07/17 18:02:23 by tndreka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,3 +46,19 @@ Brain::~Brain()
 	std::cout << "Brain destructor called" << std::endl;	
 }
 
+std::string Brain::getIdea(int i) const
+{
+	if (i >= 0 && i < 100)
+		return ideas[i];
+	else
+	{
+		std::cout << "Error: Wrong Index!!!\n";
+		return "";
+	}
+}
+
+void Brain::setIdea(int i, const std::string& idea)
+{
+	if (i >= 0 && i < 100)
+		ideas[i] = idea;
+}

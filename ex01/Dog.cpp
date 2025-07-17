@@ -6,7 +6,7 @@
 /*   By: tndreka < tndreka@student.42heilbronn.d    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/13 05:11:39 by tndreka           #+#    #+#             */
-/*   Updated: 2025/07/16 19:58:54 by tndreka          ###   ########.fr       */
+/*   Updated: 2025/07/17 18:01:36 by tndreka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,4 +42,25 @@ Dog::~Dog()
 void Dog::makeSound()const
 {
 	std::cout << "Woof Woof Woof!" << std::endl;
+}
+
+void Dog::setIdea(int i, const std::string& idea)
+{
+	if(brain)
+	{
+		brain->setIdea(i, idea);
+	}
+	else
+		perror("No Brainnnn!!!!");
+}
+
+std::string Dog::getIdea(int i) const
+{
+	if(brain)
+		return brain->getIdea(i);
+	else
+	{
+		std::cout << "Error: No BRAIN!!!\n";
+		return "";
+	}
 }

@@ -6,7 +6,7 @@
 /*   By: tndreka < tndreka@student.42heilbronn.d    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/13 05:12:12 by tndreka           #+#    #+#             */
-/*   Updated: 2025/07/16 19:58:42 by tndreka          ###   ########.fr       */
+/*   Updated: 2025/07/17 18:01:53 by tndreka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,4 +43,25 @@ Cat::~Cat()
 void Cat::makeSound()const
 {
 	std::cout << "Meow Meow Meow!" << std::endl;
+}
+
+void Cat::setIdea(int i, const std::string& idea)
+{
+	if(brain)
+	{
+		brain->setIdea(i, idea);
+	}
+	else
+		perror("No Brainnnn!!!!");
+}
+
+std::string Cat::getIdea(int i) const
+{
+	if(brain)
+		return brain->getIdea(i);
+	else
+	{
+		std::cout << "Error: No BRAIN!!!\n";
+		return "";
+	}
 }
