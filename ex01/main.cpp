@@ -6,7 +6,7 @@
 /*   By: tndreka < tndreka@student.42heilbronn.d    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/13 05:07:52 by tndreka           #+#    #+#             */
-/*   Updated: 2025/07/17 17:58:40 by tndreka          ###   ########.fr       */
+/*   Updated: 2025/07/17 18:09:27 by tndreka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,15 @@ int main()
 	
 	std::cout << "Pitbull first idea: " << pitbull.getIdea(0) << std::endl;
 	std::cout << "Pitbull second idea: " << pitbull.getIdea(1) << std::endl;	
+	
+	//Copy Pitbull 
+	
+	Dog dawg;
+	dawg = pitbull;
+	
+	std::cout << "DAWG first idea: " << dawg.getIdea(0) << std::endl;
+	
 	return 0;
+
 }
 
