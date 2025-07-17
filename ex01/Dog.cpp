@@ -6,7 +6,7 @@
 /*   By: tndreka < tndreka@student.42heilbronn.d    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/13 05:11:39 by tndreka           #+#    #+#             */
-/*   Updated: 2025/07/17 18:01:36 by tndreka          ###   ########.fr       */
+/*   Updated: 2025/07/17 18:14:37 by tndreka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ Dog& Dog::operator=(const Dog& other)
 	if (this != &other)
 	{
 		Animal::operator=(other);
+		brain = new Brain(*other.brain);		
 	}
 	return *this;
 }
