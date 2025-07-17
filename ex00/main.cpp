@@ -6,7 +6,7 @@
 /*   By: tndreka < tndreka@student.42heilbronn.d    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/13 05:07:52 by tndreka           #+#    #+#             */
-/*   Updated: 2025/07/16 17:52:14 by tndreka          ###   ########.fr       */
+/*   Updated: 2025/07/17 16:58:15 by tndreka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,13 @@
 #include "WrongAnimal.hpp"
 #include "WrongCat.hpp"
 
+/*
+	POLYMOPHISM
+	IN  C++ this allow objecs, functions or methods to take on multiple forms.
+	we have Animal CLASS that serves as a base Class.
+	DOG & CAT class that inherits Animal and override the virtual function makeSound()
+	WrongAnimal & WrongCat example when polymorphism FAILS necause of not correct implementation (missing virtual).
+*/
 int main()
 {
 	
