@@ -6,7 +6,7 @@
 /*   By: tndreka < tndreka@student.42heilbronn.d    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/13 05:07:52 by tndreka           #+#    #+#             */
-/*   Updated: 2025/07/17 18:09:27 by tndreka          ###   ########.fr       */
+/*   Updated: 2025/07/17 18:33:20 by tndreka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,8 +44,19 @@
 // 	return 0;
 // }
 
-//Deep copy test
+//SUBJECT TEST INT MAIN
+// int main()
+// {
+// 	const Animal* j = new Dog();
+// 	const Animal* i = new Cat();
+// 	delete j;//should not create a leak
+// 	delete i;
 
+// 	return 0;
+// }
+
+
+//Deep copy test
 int main()
 {
 	Dog pitbull;
@@ -62,6 +73,22 @@ int main()
 	dawg = pitbull;
 	
 	std::cout << "DAWG first idea: " << dawg.getIdea(0) << std::endl;
+	std::cout << "DAWG second idea: " << dawg.getIdea(1) << std::endl;
+	
+	dawg.setIdea(0, "Another ONE ! ! !");
+	std::cout << "DAWG first idea after the change: " << dawg.getIdea(0) << std::endl;
+	
+	Cat garfield;
+
+	garfield.setIdea(0, "To late to stop me now!!");
+	std::cout << "GARFIELD first idea: " << garfield.getIdea(0) << std::endl;
+
+	Cat copycat;
+	
+	copycat = garfield;
+	copycat.setIdea(1, "Its not the same GARFIELD");
+	std::cout << "Copyt cat idea: " << copycat.getIdea(1) << std::endl;
+	std::cout << "Copyt cat 1 idea: " << copycat.getIdea(0) << std::endl;
 	
 	return 0;
 

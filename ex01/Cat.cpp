@@ -6,7 +6,7 @@
 /*   By: tndreka < tndreka@student.42heilbronn.d    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/13 05:12:12 by tndreka           #+#    #+#             */
-/*   Updated: 2025/07/17 18:01:53 by tndreka          ###   ########.fr       */
+/*   Updated: 2025/07/17 18:23:42 by tndreka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ Cat& Cat::operator=(const Cat& other)
 	if (this != &other)
 	{
 		Animal::operator=(other);
+		delete brain;
+		brain = new Brain(*other.brain);	
 	}
 	return *this;
 }

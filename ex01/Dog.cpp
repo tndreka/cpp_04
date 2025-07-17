@@ -6,7 +6,7 @@
 /*   By: tndreka < tndreka@student.42heilbronn.d    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/13 05:11:39 by tndreka           #+#    #+#             */
-/*   Updated: 2025/07/17 18:14:37 by tndreka          ###   ########.fr       */
+/*   Updated: 2025/07/17 18:23:19 by tndreka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,11 @@ Dog& Dog::operator=(const Dog& other)
 	std::cout << "Dog copy assignment operator called" << std::endl;
 	if (this != &other)
 	{
+		//here we copyed the base of the class with the brain attribute here as well.
 		Animal::operator=(other);
+
+		// before we assign the deep copy we clean up the brain attribute first
+		delete brain;
 		brain = new Brain(*other.brain);		
 	}
 	return *this;
