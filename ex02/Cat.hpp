@@ -6,7 +6,7 @@
 /*   By: tndreka < tndreka@student.42heilbronn.d    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/13 05:12:06 by tndreka           #+#    #+#             */
-/*   Updated: 2025/07/17 17:56:43 by tndreka          ###   ########.fr       */
+/*   Updated: 2025/07/18 15:14:27 by tndreka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,9 @@
 
 #include "Animal.hpp"
 #include "Brain.hpp"
+#include "AAnimal.hpp"
 
-	class Cat : public Animal
+	class Cat : public AAnimal // inherit the abstrac class
 	{
 	private:
 		Brain* brain;

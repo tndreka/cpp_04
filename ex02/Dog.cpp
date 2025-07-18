@@ -6,7 +6,7 @@
 /*   By: tndreka < tndreka@student.42heilbronn.d    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/13 05:11:39 by tndreka           #+#    #+#             */
-/*   Updated: 2025/07/17 18:23:19 by tndreka          ###   ########.fr       */
+/*   Updated: 2025/07/18 15:25:38 by tndreka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ Dog::Dog() : brain(new Brain())
 	type = "Dog";
 }
 
-Dog::Dog(const Dog& other) : Animal(other), brain(new Brain(*other.brain))
+Dog::Dog(const Dog& other) : AAnimal(other), brain(new Brain(*other.brain))
 {
 	std::cout << "Dog copy constructor called" << std::endl;
 }
@@ -29,7 +29,7 @@ Dog& Dog::operator=(const Dog& other)
 	if (this != &other)
 	{
 		//here we copyed the base of the class with the brain attribute here as well.
-		Animal::operator=(other);
+		AAnimal::operator=(other);
 
 		// before we assign the deep copy we clean up the brain attribute first
 		delete brain;

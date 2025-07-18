@@ -6,7 +6,7 @@
 /*   By: tndreka < tndreka@student.42heilbronn.d    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/18 14:44:27 by tndreka           #+#    #+#             */
-/*   Updated: 2025/07/18 14:51:04 by tndreka          ###   ########.fr       */
+/*   Updated: 2025/07/18 15:11:06 by tndreka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,10 @@ public:
 	AAnimal();
 	AAnimal(const AAnimal& other);
 	AAnimal& operator=(const AAnimal& other);
-	~AAnimal();
+	virtual ~AAnimal();
+
+	std::string getType() const;
+	virtual void makeSound() const = 0; // Pure virtual function
 };
 
 

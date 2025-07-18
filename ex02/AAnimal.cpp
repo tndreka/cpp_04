@@ -6,7 +6,7 @@
 /*   By: tndreka < tndreka@student.42heilbronn.d    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/18 14:44:17 by tndreka           #+#    #+#             */
-/*   Updated: 2025/07/18 15:00:29 by tndreka          ###   ########.fr       */
+/*   Updated: 2025/07/18 15:12:27 by tndreka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,4 +34,9 @@ AAnimal& AAnimal::operator=(const AAnimal& other)
 AAnimal:: ~AAnimal()
 {
 	std::cout << "AAnimal Destructor called" <<std::endl;
+}
+
+std::string AAnimal::getType() const
+{
+	return this->type;
 }
